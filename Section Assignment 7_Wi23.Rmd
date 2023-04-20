@@ -1,0 +1,126 @@
+---
+title: "Section Assignment 7"
+author: ""
+date: ""
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(eval = TRUE)
+knitr::opts_chunk$set(error = TRUE)
+```
+
+
+
+
+
+***
+Please Read!  
+
+
+This week, your assignment is to run statistical hypothesis tests on data found in the associated .csv files.
+
+
+Since we have already downloaded and installed the tidyverse, this week, simply load the tidyverse functions into your working library:
+```{r,echo=FALSE}
+library(tidyverse)
+```
+This line of code above will need to be run each time you start a new R session.
+
+One of the traits of a great programmer is their ability to solve a problem they haven't seen before. One of the best ways to solve a problem you have not seen before is to see if anyone else has. Great programmers are experts of web searching. Do not be afraid to find code on an online help page and run it! 
+
+ You will be graded on not just your code, but your explanation. Remember, in this class, it is okay to copy code, but you still need to demonstrate independent thought.
+
+  ***  
+  
+
+Scenario 1: For Scenario 1, use the Egg.Price.Data generated below. This vector contains price data for the cheapest, grade A, large, dozen eggs at 15 local grocery stores. Given these data, answer the flowing Research question: Do we pay a similar price to the national average for a dozen eggs? The National average price for 1 dozen grade A, large eggs is $5.59. (Yes I had to re-write this question this quarter due to eggflation)
+```{r}
+Egg.Price.Data<-c(7.20, 8.42, 7.11, 4.71, 5.89, 5.98, 6.93, 6.58, 5.73, 7.75, 5.86, 7.79, 7.60, 5.52, 4.88)
+```
+
+
+Question 1 (1 point): What is the null and alternate hypothesis that answer the research question?
+  
+[Your answer here]
+
+Question 2 (2 points): Consult the .pdf help file associated with this week's assignment to  find the code to perform the appropriate test to address your research question. Perform that test in the space below:
+
+```{r}
+
+```
+
+Question 3 (2 points): Interpret the results of the test you performed to answer the research question. Do we pay a similar price to the national average for a dozen eggs?
+  
+[Your answer here]
+
+
+  
+  *** 
+    
+
+
+Scenario 2: For scenario 2, we will use the same garden data set that we used last week. I have included a copy of the garden data on canvas this week called "GardenDataForW7.csv". Recall that these data are measures of inorganic soil nitrogen in 500 gardens, each garden sampled in 2018 and again in 2021. You want to answer the following research question: Is there a difference in soil inorganic nitrogen in gardens between 2018 and 2021?
+
+Question 4 (1 point):First, please read in the"GardenDataForW7.csv" data set below:
+```{r}
+W7_Garden_Data<-
+head(W7_Garden_Data)
+```
+
+Question 5 (1 point): What is the null and alternate hypothesis that answer the research question?
+
+[Your Answer Here]  
+
+Question 6 (2 points): Consult the .pdf help file associated with this week's assignment to  find the code to perform the appropriate test to address your research question. Perform that test in the space below. "Hint: When performing a hypothesis test on tidy data, you aren't always comparing the means of different columns. Instead the independent variable column is tested against the dependent variable column."
+
+```{r}
+
+```
+
+Question 7 (2 points): Interpret the results of the test you performed to answer the research question in the note below. Is there a difference in soil inorganic nitrogen in gardens between 2018 and 2021?
+  
+[Your Answer Here]  
+
+
+Question 8 (1 point): Which column of nitrogen data (Transformed or Un-transformed) did you use to perform your statistical analysis? Why was that the correct choice?
+  
+[Your Answer Here]  
+
+
+Question 9 (1 point): How many samples would you need to detect the effect seen in the data with a power of 0.8? 
+
+```{r}
+
+
+#Run the necessary code above, then using this annotation, tell me the appropriate sample size you would need!
+```
+
+
+
+   ***  
+   
+   
+Question 10 (1 point): Explain the similarity between the one sample t-test and the paired t-test.
+
+[Your Answer Here]
+
+  ***  
+    
+Question 11 (1 point): What is the Wench correction for a t test? Why do we use it as the default setting for a two sample t test?
+
+[Your Answer Here]  
+
+   ***  
+   
+
+
+     
+Once you are done, click the "Knit" button above(It looks like a blue ball of yarn). Save the html file with your name and the week number in the file name: 
+
+  (for example: "Liam_Mueller_Section_7.html").  
+  
+Then upload this pdf file to canvas under the Week 7 Section Assignment before the deadline. 
+
+You are now more than half way done, and you have done some real hypothesis testing in R! Look how much programming you have learned in this short time! Congratulations, and keep up the good work. 
