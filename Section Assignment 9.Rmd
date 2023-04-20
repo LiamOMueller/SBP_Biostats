@@ -1,0 +1,183 @@
+---
+title: "Section Assignment 9"
+author: ""
+date: ""
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(eval = TRUE)
+knitr::opts_chunk$set(error = TRUE)
+knitr::opts_chunk$set(tidy = TRUE)
+```
+
+
+
+
+
+***
+Please Read!  
+
+
+Does learning a second language change brain structure? Machelli et al.(2004)*  tested 22 native Italian speakers who had learned English as a second language. Proficiencies in reading, writing, and speech were assessed by a proficiency score. Gray matter density was measured in the left inferior parietal region of the brain using a neuroimaging technique, as mm^3 of gray matter per voxel.
+
+
+* Machelli et al.(2004) Structural plasticity in the bilingual brain. Nature 431:757 https://doi.org/10.1038/431757a
+
+
+You will find the data from their study in the "Week9Brains.csv" file on Canvas.
+
+
+Since we have already downloaded and installed the tidyverse, this week, simply load the tidyverse functions into your working library:
+```{r,echo=FALSE}
+library(tidyverse)
+```
+This line of code above will need to be run each time you start a new R session.
+
+One of the traits of a great programmer is their ability to solve a problem they haven't seen before. One of the best ways to solve a problem you have not seen before is to see if anyone else has. Great programmers are experts of web searching. Do not be afraid to find code on an online help page and run it! 
+
+Copying from the internet is one of the foundations of learning how to program, but it only works as learning if you reflect on why the code you used works. For that reason, this week and in future weeks, you will need to annotate your code or answer a specific question about the process. Use the lines that look like this at the end of each question to input your explanation of the code:
+```{r,eval=FALSE,echo=TRUE}
+note<-'your note here'
+print(note)
+```
+ You will be graded on not just your code, but your explanation. Remember, in this class, it is okay to copy code, but you still need to demonstrate independent thought.
+
+  ***  
+\newpage  
+
+Just like last week, this week you will practice answering a research question step by step. Think of it as practice for your term project!
+
+Step 1. Import your data, and check the assumption of normality.
+
+Question 1. (0.5 point): Import the data you downloaded from canvas this week.
+```{r}
+BrainData<-
+head(BrainData)  
+```
+
+
+\newpage
+  
+Question 2. (2 points): Use visualizations and tests to determine that the data are normally distributed. Yes, you will have to do this twice.
+  
+```{r}
+#visualize the second language scores data here.
+Histogram1<-
+Histogram1
+```
+
+```{r}
+#Test for normality of the second language scores in this code box.
+
+```
+
+Are the second language scores data normally distributed? Is it okay that the histogram looks weird? Why/why not?
+```{r,results='asis',echo=FALSE}
+note<- ""
+print(note)
+```
+\newpage  
+
+```{r}
+#visualize the gray matter density data here.
+Histogram2<-
+Histogram2
+```
+
+```{r}
+#Test for normality of the gray matter density data in this code box.
+
+```
+
+Are the gray matter density data normally distributed? Is it okay that the histogram looks weird? Why/why not?
+```{r,results='asis',echo=FALSE}
+note<- ""
+print(note)
+```
+\newpage  
+
+Step 2. Identify your null and alternate hypotheses, generate the correct linear model, test the null hypothesis.
+
+Research question: Does learning a second language change brain structure?
+
+Question 3. (0.5 point): What is the null and alternate hypothesis that answer the research question?
+  
+```{r,results='asis',echo=FALSE}
+NullHypothesis<-""
+print(NullHypothesis)
+  
+AlternateHypothesis<-""
+print(AlternateHypothesis)
+```
+\newpage 
+  
+Question 4. (3 points): Generate the linear model and test your null hypothesis. Consult the PDF help file for code associated with performing statistical hypothesis testing in R.
+```{r}
+#Perform your hypothesis test in this code block
+```
+
+Interpret the results of the test you performed to answer the research question in the note below. Does learning a second language change brain structure? Hint:Your answer should include information you gained from the p-value, the slope, and the R-squared.
+  
+```{r,results='asis',echo=FALSE}
+note<-""
+print(note)
+```
+
+\newpage  
+
+Step 3. Graphical representation of the model.
+  
+Question 5. (2 points): Generate a figure representing the data, your model and the error around your model. Use my example as a template. Drawing a line of best fit can be done a bunch of ways in ggplot, but I recommend looking into how to use the `geom_smooth()` function as it can also create the shaded error on the graph, which is required to get full credit. Don't worry about matching the colors to the example, in fact I encourage you to look up all the different color options in R and find a color scheme you like! Some hints to help you: 1) The size of the points is larger than the default. 2) The axis text for both x and y is increased. 3) The x and y axis need to be relabeled.
+
+```{r}
+plot1<-
+plot1  
+```
+This graph is definitely competing with last week's for most complex one we have made yet! Explain how you got the model line and error on the graph.
+```{r,results='asis',echo=FALSE}
+note<-""
+print(note)
+```
+\newpage  
+
+  
+Part 2: A question on correlation:
+In the scenario above, the scientists were confident that they had an independent and dependent variable. What if we did not share that opinion? Reanalyze the brain data using a correlative model instead.
+
+Step 1: We will assume the data are normally distributed, you already tested this in Q2.
+
+Step 2. Identify your null and alternate hypotheses, generate the correct model, test the null hypothesis.
+
+Research question: Is there a relationship between learning a second language and brain structure?
+
+Question 6. (0.5 point): What is the null and alternate hypothesis that answer the research question?
+  
+```{r,results='asis',echo=FALSE}
+NullHypothesis2<-""
+print(NullHypothesis2)
+  
+AlternateHypothesis2<-""
+print(AlternateHypothesis2)
+```
+
+Question 7. (1.5 points): Test the null hypothesis. Consult the PDF help file for code associated with performing statistical hypothesis testing in R.
+```{r}
+### Perform your hypothesis test in this code block:
+```
+Interpret the results of the test you performed to answer the research question in the note below. Is there a relationship between learning a second language and brain structure? Hint: Your answer should include information you gained from the p-value, the correlation, and the confidence interval.
+  
+```{r,results='asis',echo=FALSE}
+note<-""
+print(note)
+```
+
+\newpage
+
+Once you are done, click the "Knit" button above(It looks like a blue ball of yarn). Save the pdf file with your name and the week number in the file name: 
+
+  (for example: "Liam_Mueller_Section_9.pdf").  
+  
+Then upload this pdf file to canvas/gradescope under the Week 9 Section Assignment before the deadline. 
+
